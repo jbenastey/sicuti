@@ -9,7 +9,8 @@ $route['akun/aktif/(:any)'] = 'AkunController/aktif/$1';
 
 $route['cuti'] = 'CutiController/index';
 $route['cuti/tambah'] = 'CutiController/tambah';
-$route['cuti/setujui/(:any)'] = 'CutiController/setujui/$1';
+$route['cuti/setujui_kabid/(:any)'] = 'CutiController/setujuiKabid/$1';
+$route['cuti/setujui_pimpinan/(:any)'] = 'CutiController/setujuiPimpinan/$1';
 
 $route['pegawai'] = 'PegawaiController/index';
 $route['pegawai/tambah'] = 'PegawaiController/tambah';
