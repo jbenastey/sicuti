@@ -8,6 +8,9 @@ class JabatanController extends CI_Controller
   {
     parent::__construct();
     $this->load->model('JabatanModel');
+	  if ($this->session->userdata('user_id') == null){
+		  redirect('login');
+	  }
   }
   public function index()
   {

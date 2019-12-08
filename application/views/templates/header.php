@@ -52,7 +52,7 @@
 								src="<?php echo base_url() ?>assets/img/user.png" class="user-img-radious-style"> <span
 								class="d-sm-none d-lg-inline-block"></span></a>
 						<div class="dropdown-menu dropdown-menu-right pullDown">
-							<div class="dropdown-title">Hello Sarah Smith</div>
+							<div class="dropdown-title"><?php $this->session->userdata('user_level'); ?></div>
 							<a href="profile.html" class="dropdown-item has-icon"> <i class="far
 										fa-user"></i> Profile
 							</a>

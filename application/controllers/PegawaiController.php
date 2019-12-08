@@ -11,6 +11,9 @@
 				$this->load->model('PegawaiModel');
 				$this->load->model('JabatanModel');
 				$this->load->model('UnitModel');
+				if ($this->session->userdata('user_id') == null){
+					redirect('login');
+				}
 			}
 
 			public function index()

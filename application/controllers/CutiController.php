@@ -10,6 +10,9 @@
       parent::__construct();
       $this->load->model("CutiModel");
       $this->load->model("PegawaiModel");
+      if ($this->session->userdata('user_id') == null){
+		redirect('login');
+	}
     }
     public function index()
     {
