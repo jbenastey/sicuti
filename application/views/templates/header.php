@@ -74,7 +74,7 @@
 				<div class="sidebar-brand">
 					<a href="index.html"> <img alt="image" src="<?php echo base_url() ?>assets/img/logo.png"
 											   class="header-logo"/> <span
-							class="logo-name">Aegis</span>
+							class="logo-name">cuti</span>
 					</a>
 				</div>
 				<div class="sidebar-user">
@@ -98,6 +98,10 @@
 								data-feather="monitor"></i><span>Dashboard</span>
 						</a>
 					</li>
+					<?php
+					if($this->session->userdata('user_level') == 'admin'):
+					?>
+
 					<li class="dropdown<?php
 					if ($this->uri->segment('1') == 'akun'):
 						?>
@@ -111,7 +115,7 @@
 					<li class="dropdown"><a href="#" class="nav-link has-dropdown"><i
 								data-feather="briefcase"></i><span>Data Master</span></a>
 						<ul class="dropdown-menu active">
-							<li class="active"><a class="nav-link" href="<?php echo base_url('pegawai') ?>">Pegawai</a></li>
+							<li><a class="nav-link" href="<?php echo base_url('pegawai') ?>">Pegawai</a></li>
 							<li><a class="nav-link" href="<?php echo base_url('jabatan') ?>">Jabatan</a></li>
 							<li><a class="nav-link" href="<?php echo base_url('unit') ?>">Unit Kerja</a></li>
 						</ul>
@@ -125,6 +129,21 @@
 					?>"><a href="<?php echo base_url('cuti') ?>"><i
 								data-feather="command"></i><span>Cuti</span></a>
 					</li>
+					<?php
+					else:
+					?>
+						<li class="dropdown<?php
+						if ($this->uri->segment('1') == 'cuti'):
+							?>
+							active
+						<?php
+						endif
+						?>"><a href="<?php echo base_url('cuti') ?>"><i
+									data-feather="command"></i><span>Cuti</span></a>
+						</li>
+					<?php
+					endif
+					?>
 				</ul>
 			</aside>
 		</div>

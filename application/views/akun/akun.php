@@ -45,8 +45,6 @@
                 <th>Gol</th>
                 <th>Unit Kerja</th>
                 <th>Level</th>
-                <th>No Hp</th>
-                <th>Alamat</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -68,8 +66,6 @@
                     <?php echo $cek[$key]['user_level'] ?>
                     <?php endif; ?>
                   </td>
-                  <td><?php echo $value['pegawai_nohp'] ?></td>
-                  <td><?php echo $value['pegawai_alamat'] ?></td>
                   <td>
                     <!-- key adalah indexnya -->
                     <?php if ($cek[$key]['user_id'] == null): ?>
